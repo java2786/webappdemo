@@ -23,7 +23,7 @@ pipeline {
             // If Maven was able to run the tests, even if some of the test
             // failed, record the test results and archive the jar file.
             success {
-               deploy adapters: [tomcat7(credentialsId: '325d4bcc-a9cb-45dc-bf5e-82cb4f1b1994', path: '', url: 'http://localhost:8888')], contextPath: 'pipeline-demo', war: 'target/*war'
+               deploy adapters: [tomcat7(credentialsId: '325d4bcc-a9cb-45dc-bf5e-82cb4f1b1994', path: '', url: 'http://localhost:8888')], contextPath: 'xyz', war: 'target/*war'
             }
          }
       }
